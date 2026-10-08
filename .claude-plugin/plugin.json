@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "captino",
   "displayName": "Captino",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Connects Claude Code to the Captino MCP server (funnels, pages, forms, leads, performance, subscription) and adds skills for funnel analysis, drop-off diagnosis, lead review, lead follow-up, account reports, building funnel pages and building forms.",
   "author": {
     "name": "Captino ApS",
