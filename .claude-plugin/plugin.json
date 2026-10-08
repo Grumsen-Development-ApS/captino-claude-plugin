@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "captino",
+  "displayName": "Captino",
+  "version": "0.3.0",
+  "description": "Connects Claude Code to the Captino MCP server (funnels, pages, forms, leads, performance, subscription) and adds skills for funnel analysis, drop-off diagnosis, lead review, lead follow-up, account reports, building funnel pages and building forms.",
+  "author": {
+    "name": "Captino ApS",
+    "url": "https://captino.io"
+  },
+  "homepage": "https://captino.io",
+  "repository": "https://github.com/Grumsen-Development-ApS/captino-claude-plugin",
+  "keywords": [
+    "captino",
+    "funnels",
+    "landing-pages",
+    "page-builder",
+    "forms",
+    "leads",
+    "crm",
+    "marketing",
+    "mcp"
+  ],
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "Captino MCP API key",
+      "description": "Create one in the Captino app under Settings > MCP (/app/mcp-settings). Keys start with cap_mcp_. Grant at least Funnel, Contact, Performance and Subscription read access; add Contact write for lead follow-up, Funnel write to build pages and Form write to build forms.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

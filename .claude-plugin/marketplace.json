@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "captino",
+  "owner": {
+    "name": "Captino ApS",
+    "url": "https://captino.io"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for the Captino funnel and lead platform."
+  },
+  "plugins": [
+    {
+      "name": "captino",
+      "source": "./",
+      "description": "Captino MCP server plus skills for funnel performance, drop-off, leads, follow-up, account reports, building funnel pages and building forms.",
+      "category": "productivity"
+    }
+  ]
+}
