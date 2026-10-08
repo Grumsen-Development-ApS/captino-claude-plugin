@@ -12,6 +12,8 @@
   "repository": "https://github.com/Grumsen-Development-ApS/captino-claude-plugin",
   "license": "MIT",
   "privacyPolicyUrl": "https://captino.io/privacy-policy",
+  "termsOfServiceUrl": "https://captino.io/terms-of-service",
+  "supportUrl": "https://captino.io/support",
   "keywords": [
     "captino",
     "funnels",
