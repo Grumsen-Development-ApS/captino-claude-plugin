@@ -2,10 +2,7 @@
   "mcpServers": {
     "captino": {
       "type": "http",
-      "url": "https://api.captino.io/mcp",
-      "headers": {
-        "Authorization": "Bearer ${user_config.api_key}"
-      }
+      "url": "https://api.captino.io/mcp"
     }
   }
 }

@@ -11,9 +11,10 @@ question by question.
 ## Prerequisites
 
 Uses the Captino MCP tools `list_funnels`, `list_funnel_steps`,
-`get_funnel_conversion_stats` and `get_form_step_performance`. Needs an MCP API
-key with **Funnel: read** and **Performance: read**. If they are missing or fail
-with 401/403, run the `captino-setup` skill. Never invent numbers.
+`get_funnel_conversion_stats` and `get_form_step_performance`. Needs
+**Funnel: read** and **Performance: read** access, granted when connecting
+Captino. If they are missing or fail with 401/403, run the `captino-setup`
+skill. Never invent numbers.
 
 ## Workflow
 

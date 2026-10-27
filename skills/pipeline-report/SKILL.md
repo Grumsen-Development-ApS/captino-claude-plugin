@@ -11,9 +11,9 @@ Assembles a one-page account report from several Captino MCP tools.
 
 Uses `get_contact_pipeline_stats`, `list_funnels`, `list_funnel_performance`,
 `compare_funnel_performance_with_previous_period`, `get_subscription` and
-`get_subscription_usage`. Needs an MCP API key with read access to
-**Contact**, **Funnel**, **Performance** and **Subscription**. Sections whose
-tools are missing are skipped with a one-line note; do not fabricate them.
+`get_subscription_usage`. Needs read access to **Contact**, **Funnel**,
+**Performance** and **Subscription**, granted when connecting Captino. Sections
+whose tools are missing are skipped with a one-line note; do not fabricate them.
 Run the `captino-setup` skill if nothing is available.
 
 ## Period

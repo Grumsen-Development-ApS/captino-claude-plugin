@@ -11,10 +11,10 @@ Answers questions about funnel traffic and opt-ins using the Captino MCP server.
 
 Uses these Captino MCP tools: `list_funnels`, `get_funnel`, `list_funnel_performance`,
 `get_funnel_performance`, `compare_funnel_performance_with_previous_period`,
-`get_funnel_step_performance`, `compare_funnels`. They need an MCP API key with
-**Funnel: read** and **Performance: read**. If the tools are missing or a call
-returns 401/403, run the `captino-setup` skill instead of guessing. Never fabricate
-numbers; if a tool is unavailable, say so.
+`get_funnel_step_performance`, `compare_funnels`. They need **Funnel: read** and
+**Performance: read** access, granted when connecting Captino. If the tools are
+missing or a call returns 401/403, run the `captino-setup` skill instead of
+guessing. Never fabricate numbers; if a tool is unavailable, say so.
 
 ## Workflow
 
