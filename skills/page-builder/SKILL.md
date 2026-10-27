@@ -15,9 +15,9 @@ visual builder, so the user can keep editing it there afterwards.
 Uses the Captino MCP tools `get_page_builder_reference`, `get_page_project`,
 `validate_page_project`, `save_page_project`, `publish_page`,
 `create_funnel_step`, `list_funnels`, `get_funnel` and `list_funnel_steps`.
-Needs an MCP API key with **Funnel: write** (read is enough for the reference,
-reading a project and validating). If the tools are missing or fail with
-401/403, run the `captino-setup` skill.
+Needs **Funnel: write** access, granted when connecting Captino (read is enough
+for the reference, reading a project and validating). If the tools are missing
+or fail with 401/403, run the `captino-setup` skill.
 
 Only **site steps created with the page builder** can be built this way. Form
 steps and legacy template steps are rejected with "not a page builder step";

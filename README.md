@@ -18,13 +18,23 @@ Or test a local checkout without installing:
 claude --plugin-dir .
 ```
 
-On enable, the plugin asks for a **Captino MCP API key**. Create one in the
-Captino app under **Settings → MCP** (`/app/mcp-settings`). Keys start with
-`cap_mcp_`. Grant Funnel write, Contact write, Form write, Performance read and
-Subscription read to use every skill. The key is stored in Claude Code's secure storage and
-sent as `Authorization: Bearer <key>`.
+## Connect
 
-Check the connection with `/mcp`; the server shows up as `captino`.
+The server uses OAuth, so there is nothing to configure: Claude Code discovers
+the Captino sign-in and registers itself.
+
+1. Run `/mcp`, select `plugin:captino:captino` and choose **Authenticate**.
+   (`claude mcp login plugin:captino:captino` does the same from a shell.)
+2. Sign in on captino.io and tick the resources Claude Code may use on the
+   consent screen. Grant Funnel write, Contact write, Form write, Performance
+   read and Subscription read to use every skill.
+3. Approve. The server shows as connected in `/mcp`.
+
+The connection acts as the user who approved it, in that user's Captino
+account. Tokens are stored by Claude Code and refresh on their own. Connected
+apps are listed in Captino under **Settings → MCP** (`/app/mcp-settings`),
+where they can be revoked. To change permissions, sign in again: `/mcp` →
+**Clear authentication** → **Authenticate**.
 
 ## Skills
 
@@ -37,14 +47,17 @@ Check the connection with `/mcp`; the server shows up as `captino`.
 | `/captino:pipeline-report` | Weekly or monthly account overview: pipeline, funnels, subscription usage | Contact, Funnel, Performance, Subscription read |
 | `/captino:page-builder` | Build, edit and publish funnel step pages (landing, opt-in, thank-you, popups) from a brief | Funnel write |
 | `/captino:form-builder` | Build, edit and publish multi-question forms (lead, qualification, survey) and add them to a funnel as a form step | Form write, Funnel write |
-| `/captino:captino-setup` | Create a key, configure the plugin, troubleshoot 401/403/missing tools | none |
+| `/captino:captino-setup` | Connect and sign in, change permissions, troubleshoot 401/403/missing tools | none |
 
 Claude also picks these skills up on its own from natural questions such as
 "how did Spring Campaign do last week" or "any new leads today".
 
 ## MCP tools
 
-The server exposes only the tools the key has permission for.
+The server exposes only the tools the granted permissions allow. Each group
+below is one resource on the consent screen, with the OAuth scopes
+`<resource>:read` and `<resource>:write` (`funnel:read`, `contact:write`, ...);
+Performance and Subscription are read only. Write implies read.
 
 - **Funnel**: `list_funnels`, `get_funnel`, `list_funnel_steps`, `create_funnel`,
   `update_funnel`, `set_funnel_active`, `create_funnel_step` (site step, or form

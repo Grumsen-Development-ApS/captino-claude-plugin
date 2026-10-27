@@ -12,10 +12,10 @@ what you change.
 ## Prerequisites
 
 Uses the Captino MCP tools `list_contacts`, `get_contact`, `get_contact_options`,
-`update_contact` and `create_contact_meeting`. Needs an MCP API key with
-**Contact: write** (write implies read). If `update_contact` or
-`create_contact_meeting` is not listed, the key is read-only; tell the user and
-point them to the `captino-setup` skill instead of trying workarounds.
+`update_contact` and `create_contact_meeting`. Needs **Contact: write** access
+(write implies read), granted when connecting Captino. If `update_contact` or
+`create_contact_meeting` is not listed, only read access was granted; tell the
+user and point them to the `captino-setup` skill instead of trying workarounds.
 
 ## Domain facts
 

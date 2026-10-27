@@ -12,8 +12,9 @@ a lead (status, value, note, meeting) use the `lead-followup` skill.
 
 Uses the Captino MCP tools `list_leads`, `list_contacts`, `get_contact`,
 `get_contact_activity`, `list_contact_opt_ins`, `get_contact_pipeline_stats`
-and `get_contact_options`. Needs an MCP API key with **Contact: read**. If the
-tools are missing or fail with 401/403, run the `captino-setup` skill.
+and `get_contact_options`. Needs **Contact: read** access, granted when
+connecting Captino. If the tools are missing or fail with 401/403, run the
+`captino-setup` skill.
 
 ## Domain facts
 

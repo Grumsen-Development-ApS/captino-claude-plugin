@@ -19,10 +19,9 @@ the `page-builder` skill and its `captino-optin-form` component instead.
 Uses the Captino MCP tools `list_forms`, `get_form`, `create_form`,
 `update_form`, `publish_form`, `list_funnels`, `get_funnel`,
 `list_funnel_steps`, `create_funnel_step`, `set_funnel_step_form` and
-`set_form_step_completion`. Needs an
-MCP API key with **Form: write** to author forms and **Funnel: write** to add
-them to a funnel. If the tools are missing or fail with 401/403, run the
-`captino-setup` skill.
+`set_form_step_completion`. Needs **Form: write** access to author forms and
+**Funnel: write** to add them to a funnel, granted when connecting Captino. If
+the tools are missing or fail with 401/403, run the `captino-setup` skill.
 
 ## Workflow
 
